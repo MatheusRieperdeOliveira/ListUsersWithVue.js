@@ -4,3 +4,9 @@ Projeto desenvolvido para fins de aprendizado e consolidação de conhecimentos 
 
 ## 📌 Sobre o Projeto
 A aplicação consiste em um painel de listagem que consome uma API externa de usuários fictícios. O objetivo principal foi praticar a criação de componentes reutilizáveis, gerenciamento de estado reativo, layout responsivo em grid e boas práticas de tipografia e espaçamento.
+
+## Imagens do projeto
+<video width="640" height="360" controls>
+  <source src="./public/showproject.mp4" type="video/mp4">
+  Seu navegador não suporta a tag de vídeo.
+</video>
