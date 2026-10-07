@@ -1,0 +1,15 @@
+name: list_users_study
+
+services:
+  front:
+    container_name: front
+    build:
+      context: .
+      dockerfile: Dockerfile
+    volumes:
+      - "./:/var/www/app"
+      - "/var/www/app/node_modules"
+    working_dir: "/var/www/app"
+    command: ["npm", "run", "dev", "--", "--host", "0.0.0.0"]
+    ports:
+      - "3000:3000"
