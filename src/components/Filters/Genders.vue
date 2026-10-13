@@ -1,24 +1,29 @@
 <template>
-    <v-card variant="outlined" rounded="lg" class="filter-card d-flex align-center justify-space-between ga-4 pa-3">
-        <div class="d-flex align-center ga-3">
-            <v-icon icon="mdi-gender-male-female" size="24" color="primary" />
+    <v-card variant="flat" rounded="xl" class="pa-4">
+        <div class="d-flex align-center ga-3 mb-4">
+            <v-avatar color="primary" variant="tonal" rounded="lg" size="44">
+                <v-icon icon="mdi-gender-male-female" size="24" />
+            </v-avatar>
 
             <div class="d-flex flex-column">
-                <span class="text-body-2 font-weight-medium">
+                <span class="text-subtitle-2 font-weight-semibold">
                     Gênero
                 </span>
 
                 <span class="text-caption text-medium-emphasis">
-                    Filtrar pessoas por gênero
+                    Filtre os resultados por gênero
                 </span>
             </div>
         </div>
 
-        <v-select :model-value="props.genderForSearch" @update:model-value="emits('update:genderForSearch', $event)"
-            :items="genders" item-title="title" item-value="value" placeholder="Qualquer" clearable density="compact"
-            variant="outlined" hide-details :min-width="140" aria-label="Filtrar por gênero" />
+        <v-select :model-value="props.genderForSearch" @update:model-value="
+            emits('update:genderForSearch', $event)
+            " :items="genders" item-title="title" item-value="value" placeholder="Todos os gêneros" clearable
+            density="comfortable" variant="outlined" rounded="lg" hide-details prepend-inner-icon="mdi-filter-variant"
+            aria-label="Filtrar por gênero" />
     </v-card>
 </template>
+
 <script setup lang="ts">
 import genders from '@/composables/genders.json';
 import { defineEmits, defineProps } from 'vue';

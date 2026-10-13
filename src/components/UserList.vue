@@ -1,6 +1,6 @@
 <template>
   <v-container fluid>
-    <v-list class="pa-5 overflow-y-auto" lines="two" style="max-height: calc(90vh - 43px);">
+    <v-list class="pa-5 overflow-y-auto" lines="two" style="max-height: calc(100dvh - 140px);">
       <v-list-item v-for="(user, index) in users" :key="index" :subtitle="formatAt(user.email)"
         :title="`${user.name?.first} ${user.name?.last}`" class="mb-3 pa-4 border rounded">
 

@@ -5,12 +5,7 @@
         <Filters v-model:numberForSearchPeople="numberForSearchPeople" v-model:genderForSearch="genderForSearch"
           v-model:nationalityForSearch="nationalityForSearch" />
 
-        <div id="ultis">
-          <Button prepend-icon="mdi-list-box" :onClick="() => { modeList = true; modeCard = false }" text="List" />
-          <Button prepend-icon="mdi-card-account-details" :onClick="() => { modeCard = true; modeList = false }"
-            text="Card" />
-        </div>
-
+        <Actions />
       </div>
       <UserCard :users="users" v-if="modeCard" />
       <UserList :users="users" v-if="modeList" />
@@ -19,10 +14,10 @@
 </template>
 
 <script lang="ts" setup>
-import Button from '@/components/Button.vue'
 import Filters from '@/components/Filters/index.vue'
 import UserCard from '@/components/UserCard.vue'
 import UserList from '@/components/UserList.vue'
+import Actions from '@/components/Actions.vue'
 
 import { onMounted, ref, watch } from 'vue'
 
