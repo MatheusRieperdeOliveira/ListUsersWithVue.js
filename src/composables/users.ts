@@ -1,5 +1,11 @@
-export const getUsers = async () => {
-  const request = await fetch('https://randomuser.me/api/?nat=br&results=99')
+export const getUsers = async (numberUser: number, gender: string, nationality: string) => {
+  let url = `https://randomuser.me/api/?nat=${nationality}&results=${numberUser}`
+
+  if (gender) {
+    url += `&gender=${gender}`
+  }
+
+  const request = await fetch(url)
   const response = await request.json()
 
   return response.results

@@ -8,6 +8,8 @@
           <Avatar :image="user.picture?.thumbnail" class="mr-3" />
         </template>
 
+        {{ user.location?.country }}
+
         <template #append>
           <div class="d-flex ga-2">
             <Button prependIcon="mdi-trash-can" :onClick="() => { console.log('deleted') }" color="red" />
